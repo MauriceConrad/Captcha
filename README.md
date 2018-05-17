@@ -56,7 +56,7 @@ But you also could use a generator function that returns a completely random lis
 As explained, you can also generate the captchas passing a function that returns a new captcha object.
 
 ```javascript
-const myCaptcha = new Captcha(function() {
+const myCaptcha = new Captcha(async function() {
   // Example
   // Require captcha generator
   const CaptchaGenerator = require('node-captcha-generator');
