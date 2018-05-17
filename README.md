@@ -91,7 +91,7 @@ yourExpressApp.use("/captcha", myCaptcha.Router);
 
 ### Easy Way
 
-To **create** and **enter** captchas in a very easy way, use the [Client API](#ClientAPI) that is represented by the file `/captcha.client.js`. When using this feature, you do not have to care about `/create` and `/enter` or about handling the different types of captchas. You just create a `<captcha-auth>` element and listen to some events.
+To **create** and **enter** captchas in a very easy way, use the [Client API](#client-api) that is represented by the file `/captcha.client.js`. When using this feature, you do not have to care about `/create` and `/enter` or about handling the different types of captchas. You just create a `<captcha-auth>` element and listen to some events.
 
 
 ## Example
