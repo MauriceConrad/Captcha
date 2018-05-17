@@ -38,8 +38,11 @@ const url = require('url');
 // Sample API Endpoint that requires captcha authentification
 app.get("/api", function(req, res) {
   const reqUrl = url.parse(req.url, true);
+  // Check wether the token is valid
   if (captchaHandler.validateToken(reqUrl.query.token)) {
     res.send("Hello World!");
+    // Delete captcha by token to avoid re using this token
+    captchaHandler.deleteCaptcha(reqUrl.query.token);
   }
   res.end("You are not authentificated!");
 });

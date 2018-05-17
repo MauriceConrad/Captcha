@@ -1,6 +1,6 @@
 {
 	"name": "server-captcha",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"description": "A simple server side captcha service",
 	"keywords": [
 		"captcha"

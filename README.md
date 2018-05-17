@@ -328,4 +328,4 @@ Because you may want to test the client API without setting up your own node ser
 
 ## Captcha Dataset
 
-In the `/demo` folder exist a very small `captchas.json` dataset for captchas. If you want a bigger one, look at `hdadhakkas`
+In the `/demo` folder exist a very small `captchas.json` dataset for captchas.
