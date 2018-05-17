@@ -1,0 +1,14 @@
+{
+	"name": "demo-server",
+	"version": "1.0.0",
+	"license": "ISC",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.16.3",
+		"node-captcha-generator": "0.0.1"
+	}
+}

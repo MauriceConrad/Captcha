@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Captcha Demo</title>
+    <script type="module">
+      import * as Captcha from "./js/captcha.client.js"
+
+
+      const captchaElement = document.querySelector("captcha-auth");
+
+      var token;
+
+      captchaElement.addEventListener("auth", function(event) {
+        token = event.detail.token;
+      });
+
+      document.querySelector(".btn-api").addEventListener("click", function() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "api?token=" + token, true);
+        xhr.addEventListener("load", function() {
+          alert(this.response);
+        });
+        xhr.send();
+      });
+    </script>
+    <style media="screen">
+      body {
+        text-align: center;
+      }
+      button {
+        border: 1px solid #d16e12;
+        background-color: #f17d12;
+        font-size: 1em;
+        color: #fff;
+        padding: 5px 8px;
+        cursor: pointer;
+      }
+      button:active {
+        border-color: #c76811;
+        background-color: #da7314;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo</h1>
+    <!-- data-api refers to the api endpoint that is used for captcha request here -->
+    <!-- This should be any possible url that refers to a enpoint which routes to the captcha express middleware-->
+    <captcha-auth data-api="https://dev.maurice-conrad.eu/captcha-demo/captcha" data-stylesheet="css/captcha.css">
+
+    </captcha-auth>
+    <br><br>
+    <button class="btn-api">Hello World</button>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+	"name": "server-captcha",
+	"version": "0.1.4",
+	"description": "A simple server side captcha service",
+	"keywords": [
+		"captcha"
+	],
+	"license": "ISC",
+	"author": "Maurice Conrad",
+	"main": "captcha.middleware.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"add": "node addCapture.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/MauriceConrad/Captcha.git"
+	},
+	"dependencies": {
+		"crypto": "^1.0.1"
+	}
+}
