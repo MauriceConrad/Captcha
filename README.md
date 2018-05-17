@@ -1,3 +1,10 @@
+# Captcha API
+
+* Server side express middleware for creating and handling captcha authentication
+* Client side API for handling captchas using a `<captcha-auth>` (custom) element
+
+[Live Demo](https://dev.maurice-conrad.eu/captcha-demo/)
+
 # How it works
 
 1. Client creates captcha from **our** API with an unique id
